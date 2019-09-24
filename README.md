@@ -11,7 +11,7 @@ pip install dockerfile-requirements
 
 ## Usage
 <!-- First, prepare a `Dockerfile` like so: -->
-First, compare a `Dockerfile.template` file like so:
+First, prepare a `Dockerfile.template` file like so:
 
 ```dockerfile
 FROM python:latest

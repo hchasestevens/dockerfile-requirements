@@ -17,6 +17,7 @@ First, compare a `Dockerfile.template` file like so:
 FROM python:latest
 
 {{ add_requirements('requirements.txt') }}
+# These two lines will become redundant:
 ADD requirements.txt /tmp/requirements.txt
 RUN pip install -U -r /tmp/requirements.txt
 
@@ -66,6 +67,7 @@ RUN pip install keras
 RUN pip install tensorflow
 RUN pip install scikit-learn
 
+# These two lines will become redundant:
 ADD requirements.txt /tmp/requirements.txt
 RUN pip install -U -r /tmp/requirements.txt
 

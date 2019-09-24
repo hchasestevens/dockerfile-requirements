@@ -10,7 +10,8 @@ pip install dockerfile-requirements
 ```
 
 ## Usage
-First, prepare a `Dockerfile` like so:
+<!-- First, prepare a `Dockerfile` like so: -->
+First, compare a `Dockerfile.template` file like so:
 
 ```dockerfile
 FROM python:latest
@@ -37,12 +38,15 @@ keras
 tensorflow
 ```
 
+
 Then, you can simply run:
+<!--
 ```bash
 docker build -t my-image-name -f <(dockerfile-requirements Dockerfile) .
 ```
 
 Or, if you prefer, name the `Dockerfile` above as `Dockerfile.template`, and execute:
+-->
 ```
 dockerfile-requirements Dockerfile.template > Dockerfile
 docker build -t my-image-name .
@@ -62,8 +66,8 @@ RUN pip install keras
 RUN pip install tensorflow
 RUN pip install scikit-learn
 
-ADD req.txt /tmp/req.txt
-RUN pip install -U -r /tmp/req.txt
+ADD requirements.txt /tmp/requirements.txt
+RUN pip install -U -r /tmp/requirements.txt
 
 ADD . /code
 WORKDIR /code

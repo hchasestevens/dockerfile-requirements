@@ -2,7 +2,7 @@
 Inlining requirements.txt files into Dockerfiles for better caching
 
 ## What does this do?
-Dockerfile-requirements gives you an easy way to inline `requirements.txt` requirements into a `Dockerfile` without manually having to keep the two in sync. This allows you to avoid the pain of cache invalidation and having to reinstall all your project's dependencies every time you add or update your `requirements.txt`.
+Dockerfile-requirements gives you an easy way to inline `requirements.txt` requirements into a `Dockerfile` without manually having to keep the two in sync. This allows you to avoid the pain of cache invalidation and having to reinstall all your project's dependencies every time you add to or update your `requirements.txt`.
 
 ## Installation
 ```bash

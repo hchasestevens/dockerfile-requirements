@@ -79,9 +79,6 @@ EXPOSE 5000
 
 with your requirements sorted by git authorship datetime, from oldest to newest. This helps retain as many intermediary layers as possible during the image build process, which can make things significantly faster in comparison to a simple `ADD` and `RUN pip install -r`, especially if you're just adding a new dependency.
 
-## Known issues
-- `dockerfile-requirements` does not support comments in `requirements.txt` (yet)
-
 ## Contacts
 
 * Name: [H. Chase Stevens](http://www.chasestevens.com)

@@ -1,5 +1,6 @@
 import os
 import sys
+import datetime
 
 import git
 from jinja2 import Template
@@ -15,7 +16,7 @@ def get_last_changed(fname):
     blame = repo.blame('HEAD', os.path.abspath(fname))
     line_dt = {line: commit.authored_datetime for commit, block in blame for line in block}
     def key(reqline):
-        last_modified = line_dt[reqline]
+        last_modified = line_dt.get(reqline, datetime.datetime.now(datetime.timezone.utc))
         return last_modified, reqline
     return key
 
@@ -30,7 +31,7 @@ ADD_REQUIREMENTS_MACRO = """
 {%- macro add_requirements(fname) -%}
 # Requirements populated from {{fname}}
 {% for requirement in read_requirements(fname) -%}
-RUN pip install {{ requirement }}
+RUN pip install "{{ requirement }}"
 {% endfor -%}
 {%- endmacro -%}
 """

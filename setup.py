@@ -4,7 +4,7 @@ setup(
     name='dockerfile-requirements',
     packages=['dockerfile_requirements'],
     platforms='any',
-    version='0.0.2',
+    version='0.0.3',
     description='Inlining requirements.txt files into Dockerfiles for better caching.',
     author='H. Chase Stevens',
     author_email='chase@chasestevens.com',

@@ -31,7 +31,7 @@ ADD_REQUIREMENTS_MACRO = """
 {%- macro add_requirements(fname, args="") -%}
 # Requirements populated from {{fname}}
 {% for requirement in read_requirements(fname) -%}
-RUN pip install "{{ requirement }}" {{ args }}
+RUN pip install {{ args }} "{{ requirement }}" 
 {% endfor -%}
 {%- endmacro -%}
 """

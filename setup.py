@@ -4,14 +4,14 @@ setup(
     name='dockerfile-requirements',
     packages=['dockerfile_requirements'],
     platforms='any',
-    version='0.0.3',
+    version='0.0.4',
     description='Inlining requirements.txt files into Dockerfiles for better caching.',
     author='H. Chase Stevens',
     author_email='chase@chasestevens.com',
     url='https://github.com/hchasestevens/dockerfile-requirements',
     license='MIT',
     install_requires=[
-        'gitpython>=3.0.2',
+        'gitpython>=3.1.0',
         'jinja2>=2.10.1',
     ],
     entry_points={
